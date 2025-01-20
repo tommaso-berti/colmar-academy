@@ -6,13 +6,57 @@
     color: #4a4a4a;
 }
 
-header {
-    height: 64px;
-    padding: 0 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+/*MOBILE*/
+@media only screen and (max-width: 480px) {
+    #logo h2 {
+        display: none;
+    }
+    .mobile-hidden {
+        display: none;
+    }
+    .pc-hidden {
+        display: inline;
+    }
+
+    header {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 80px;
+    }
+}
+
+/*DESKTOP*/
+@media only screen and (min-width: 480px) {
+    #logo h2 {
+        display: inline;
+    }
+    .mobile-hidden {
+        display: inline;
+    }
+    .pc-hidden {
+        display:none;
+    }
+
+    header {
+        height: 64px;
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 16px;
+    }
 }
 
 #logo {
@@ -22,13 +66,7 @@ header {
 
 #logo img {
     width: auto;
-    height: 50px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    gap: 16px;
+    max-height: 50px;
 }
 
 nav ul li {
@@ -52,6 +90,7 @@ section div {
 
 #something-new {
     background-color: #d8d8d8;
+    display: flex;
 }
 
 .side-image {
@@ -127,6 +166,7 @@ section div {
     margin-top: 32px;
     margin-bottom: 24px;
 }
+
 .content p {
     margin-bottom: 24px;
     color: grey;
@@ -136,10 +176,10 @@ section div {
     color: grey;
 }
 
-#information .right-side-content {
+.right-side-content {
     flex-direction: column;
     max-width: 40%;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-grow: 1;
 }
 
@@ -148,6 +188,7 @@ section div {
     display: flex;
     padding: 16px;
     border: 1px solid lightgrey;
+    margin: 5px 0;
 }
 
 .activity-image {
@@ -180,7 +221,7 @@ section div {
     padding: 32px 72px;
 }
 
-#start-learning>h1 {
+.section-title {
     font-size: xx-large;
     text-align: center;
     margin-bottom: 32px;
@@ -190,6 +231,8 @@ section div {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    row-gap: 32px;
+    column-gap: 32px
 }
 
 .card {
@@ -198,6 +241,7 @@ section div {
     width: 30%;
     height: auto;
     flex-grow: 1;
+    background-color: white;
 }
 
 .card-image {
@@ -207,4 +251,56 @@ section div {
 .card-image>img {
     width: 100%;
     height: auto;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 24px 16px;
+    row-gap: 12px;
+}
+
+.card-content h4,p {
+    color: #646464;
+    font-weight: lighter;
+}
+
+#thesis {
+    padding: 32px 24px;
+    max-width: 100%;
+}
+
+.video>video {
+    max-width:100%;
+    height: auto;
+}
+
+.video {
+    max-width: 100%;
+    height: auto;
+}
+
+.content h2 {
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.section-content {
+    display: flex;
+    gap: 24px;
+}
+
+footer {
+    border-top: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+footer>p {
+    color: grey;
+}
+
+.terms-privacy>a {
+    margin: 0 5px;
 }
